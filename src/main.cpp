@@ -1,21 +1,27 @@
+#include <Servo.h>
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+// Create a Servo object
+Servo myServo;
+
+// Define the PWM pin
+int servoPin = 9;
 
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(921600);
-  Serial.println("Hello from the setup");
+  // Attach the servo to the specified pin
+  myServo.attach(servoPin);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Rotate to 0 degrees
+  myServo.write(0);
   delay(1000);
-  digitalWrite(LED_BUILTIN, HIGH);
-  Serial.println("Looping");
-  delay(1000);
-  digitalWrite(LED_BUILTIN, LOW);
 
+  // Rotate to 90 degrees
+  myServo.write(90);
+  delay(1000);
+
+  // Rotate to 180 degrees
+  myServo.write(180);
+  delay(1000);
 }
