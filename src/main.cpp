@@ -1,19 +1,37 @@
+#include <Servo.h>
 #include <Arduino.h>
 
-// Define the pin for the LED
-int ledPin = 9;
+// Create a Servo object
+Servo myServo;
+
+// Define the PWM pin
+int servoPinL = 9;
+int servoPinR = 7;
+int ledPin = 1;
 
 void setup() {
-  // Set the LED pin as an OUTPUT
+  // Attach the servo to the specified pin
+
   pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  // Turn the LED ON
+  // Rotate to 0 degrees  
+  myServo.attach(servoPinL);
+  myServo.write(0);
+  delay(20);
+  myServo.attach(servoPinR);
+  myServo.write(0);
   digitalWrite(ledPin, HIGH);
-  delay(1000); // Wait for 1 second
+  delay(1000);
 
-  // Turn the LED OFF
-  digitalWrite(ledPin, LOW);
-  delay(1000); // Wait for 1 second
+  // Rotate to 90 degrees
+  myServo.attach(servoPinL);
+  myServo.write(90);
+  delay(20);
+  myServo.attach(servoPinR);
+  myServo.write(90);
+  digitalWrite(ledPin, HIGH);
+  
+  delay(1000);
 }

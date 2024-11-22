@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 // Define the pin for the LED
-int ledPin = 9;
+int ledPin = 1;
 
 void setup() {
   // Set the LED pin as an OUTPUT
