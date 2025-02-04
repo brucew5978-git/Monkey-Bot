@@ -6,7 +6,7 @@ Servo servoR;
 
 //PWM pin
 int servoPinL = 9;
-int servoPinR = 10;
+int servoPinR = 7;
 
 void setup() {
   //Attach servos to the specific pin
