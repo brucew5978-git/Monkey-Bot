@@ -36,10 +36,10 @@ void loop() {
 
   // Rotate to 90 degrees
   myServo.attach(servoPinL);
-  myServo.write(90);
+  myServo.write(15);
   delay(20);
   myServo.attach(servoPinR);
-  myServo.write(90);
+  myServo.write(15);
   // digitalWrite(redLedPin1, LOW);
   // digitalWrite(redLedPin2, LOW);
   digitalWrite(blueLedPin, LOW);
